@@ -7,6 +7,85 @@
 typedef long long ll;
 
 using namespace std;
+long long calcNcR(int n, int r)
+{
+ 
+ if(r>n)
+ return 0;
+ 
+    long long p = 1, k = 1;
+ 
+
+    if (n - r < r)
+        r = n - r;
+ 
+    if (r != 0) {
+        while (r) {
+            p *= n;
+            k *= r;
+ 
+            long long m = __gcd(p, k);
+ 
+         
+            p /= m;
+            k /= m;
+ 
+            n--;
+            r--;
+        }
+ 
+        
+    }
+ 
+    else
+        p = 1;
+ 
+    return p;
+}
+
+//codechef etup
+void etup(){
+    IOS;  
+    int t;
+    cin>>t;
+    // cout<<1;
+    while(t--){
+        int n,q; cin>>n>>q; int a[100000],oddc[100000],evenc[100000]; int oddcnt=0,evencnt=0,tmp;
+        for(int i=0;i<n;i++)
+        {
+            cin>>tmp; a[i]=tmp; 
+            // cout<<tmp;
+            if((tmp%2)==0)
+            {
+                evencnt++; 
+                evenc[i]=evencnt; 
+                oddc[i]=oddcnt;
+                // cout<<endl<<"EVEN"<<evenc[i]<<endl;
+            }
+            if((tmp%2)==1)
+            {
+                oddcnt++; 
+                oddc[i]=oddcnt;  
+                evenc[i]=evencnt;           
+                // cout<<endl<<"ODD"<<oddc[i]<<endl;
+
+            }
+            
+        }
+        int ans=0;
+        for(int i=0;i<q;i++){
+            int l,r; cin>>l>>r;
+            // int even=(evenc[r-1]-((l==1)?0:evenc[l-2]));
+            // int odd=(oddc[r-1]-((l-1)?0:oddc[l-2]));
+            // ans=((evenc[r-1]-((l==1)?0:evenc[l-2]))*calcNcR((oddc[r-1]-((l-1)?0:oddc[l-2])),2))+(calcNcR((evenc[r-1]-((l==1)?0:evenc[l-2])),3));
+            cout<<((evenc[r-1]-((l==1)?0:evenc[l-2]))*calcNcR((oddc[r-1]-((l==1)?0:oddc[l-2])),2))+(calcNcR((evenc[r-1]-((l==1)?0:evenc[l-2])),3))<<endl;
+
+        }
+        // cout<<endl;
+        //  for(int i=0;i<n;i++){cout<<oddc[i]<<" "<<evenc[i]<<endl;}
+    }
+    
+}
 //first difficult problem taxi CF 158/B
 void taxi()
 {
