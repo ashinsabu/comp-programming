@@ -4,6 +4,8 @@
 
 typedef long long ll;
 using namespace std;
+//to sort by mini vectors sizes line
+//sort(q.begin(), q.end(), [](const vector<int> & a, const vector<int> & b){ return a.size() < b.size(); });
 
 void vectorprac();
 void setprac();
