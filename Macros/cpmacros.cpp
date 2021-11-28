@@ -1,4 +1,10 @@
 //Ashin Sabu - https://www.linkedin.com/in/ashin-sabu-1059a6175/ - https://github.com/ashinsabu
+//pragmas directive allows use of suppressed optimizations available
+//only in g++ compilers(won't work on gcc compilers)
+#pragma GCC optimize("Ofast")
+#pragma GCC optimize ("unroll-loops")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,avx2,fma")
+
 #include <bits/stdc++.h>
 
 #define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
