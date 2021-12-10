@@ -14,6 +14,7 @@
 #define vll vector<long long>
 #define ALL(v) v.begin(), v.end()
 #define SORT(v) sort(ALL(v))
+//other small preprocessor directives to code faster ^^
 
 typedef long long ll;
 
