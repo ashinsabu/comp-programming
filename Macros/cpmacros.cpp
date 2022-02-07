@@ -13,7 +13,7 @@ using namespace std;
 #define ALL(v) v.begin(), v.end()
 #define SORT(v) sort(ALL(v))
 typedef long long ll;
-const unsigned ll MOD=1e9 + 7;
+const unsigned long long MOD=1e9 + 7;
 
 #ifndef ONLINE_JUDGE
 #define debug(x) cerr<< #x <<" "; _print(x); cerr << endl;
