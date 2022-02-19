@@ -12,8 +12,12 @@ using namespace std;
 #define vll vector<long long>
 #define ALL(v) v.begin(), v.end()
 #define SORT(v) sort(ALL(v))
+
+#define int long long int
+
 typedef long long ll;
-const unsigned long long MOD=1e9 + 7;
+
+const unsigned long long MOD=998244353;
 
 #ifndef ONLINE_JUDGE
 #define debug(x) cerr<< #x <<" "; _print(x); cerr << endl;
@@ -29,12 +33,8 @@ template<class T,class U> void _print(map <T,U> v1){cerr << "[ "; for(auto& i:v1
 template<class T,class U> void _print(multimap <T,U> v1){cerr << "[ "; for(auto& i:v1){_print(i.first); cerr << "-"; _print(i.second); cerr <<" , "; } cerr << "]";}
 
 
-int main()
+int32_t main()
 {
-    // #ifndef ONLINE_JUDGE
-    // freopen("input.txt", "r", stdin);
-    // freopen("output.txt", "w", stdout);
-    // #endif
     IOS;  
     cerr<<"time taken : "<<(float)clock()/CLOCKS_PER_SEC<<" secs"<<endl; 
 }
