@@ -35,6 +35,10 @@ template<class T,class U> void _print(multimap <T,U> v1){cerr << "[ "; for(auto&
 
 int32_t main()
 {
-    IOS;  
+    IOS;
+    #ifndef ONLINE_JUDGE
+        freopen("input.txt", "r", stdin);
+        freopen("output.txt", "w", stdout); 
+    #endif  
     cerr<<"time taken : "<<(float)clock()/CLOCKS_PER_SEC<<" secs"<<endl; 
 }
