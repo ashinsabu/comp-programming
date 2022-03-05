@@ -26,6 +26,7 @@ const unsigned long long MOD=998244353;
 #endif
 
 void _print(int a){cerr << a;} void _print(long long a){cerr << a;} void _print(char a){cerr << a;} void _print(string a){cerr << a;} void _print(bool a){cerr << a;}
+template<class T, class U> void _print(pair<T,U> p1){cerr<<"{"<<p1.first<<','<<p1.second<<"}";}
 template<class T> void _print(vector <T> v1){cerr << "[ "; for(T i:v1){_print(i); cerr << " "; } cerr << "]";}
 template<class T> void _print(set <T> v1){cerr << "[ "; for(T i:v1){_print(i); cerr << " "; } cerr << "]";}
 template<class T> void _print(multiset <T> v1){cerr << "[ "; for(T i:v1){_print(i); cerr << " "; } cerr << "]";}
