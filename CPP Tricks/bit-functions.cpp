@@ -11,6 +11,13 @@ using namespace std;
 typedef long long ll;
 const int MOD = 1e9 + 7;
 
+//returns the next integer with same number of set bits.
+// i.e. 1111 is converted 10111
+int next_popcount(int n) {
+    int c = (n & -n), r = n + c;
+    return (((r ^ n) >> 2) / c) | r;
+}
+
 int32_t main()
 {
    int x0=1,x1=2,x2=4,x3=8;
