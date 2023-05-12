@@ -27,7 +27,6 @@ template<class T,class U> void _print(unordered_map <T,U> v1){cerr << "[ "; for(
 template<class T,class U> void _print(multimap <T,U> v1){cerr << "[ "; for(auto& i:v1){_print(i.first); cerr << "-"; _print(i.second); cerr <<" , "; } cerr << "]";}
 
 void solve(){
-    
 }
 
 int32_t main()
